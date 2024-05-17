@@ -1,13 +1,14 @@
 import { Canvas } from "@react-three/fiber";
 import Model from "./models/model";
-import { Environment, CameraControls } from "@react-three/drei";
+import { Environment } from "@react-three/drei";
 
 function Scene() {
   return (
     <Canvas className="h-[150px] w-[150px]">
-      <CameraControls />
-      <Environment preset="warehouse" />
-      <pointLight color={"red"} intensity={105} position={[0, 0, 0]} />
+      {/* <Environment preset="night" /> */}
+      <ambientLight color={"green"} intensity={0.5} />
+      <pointLight color={"red"} intensity={250} position={[-5, -3, -5]} />
+      <pointLight color={"green"} intensity={100} position={[5, -3, 5]} />
       <Model />
     </Canvas>
   );
