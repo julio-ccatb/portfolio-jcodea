@@ -81,8 +81,7 @@ export default function Home() {
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (ExperienceisInView) setTarget("experience");
     if (aboutisInView) setTarget("about");
-
-    console.log(latest);
+    // console.log(latest);
   });
 
   const aboutisInView = useInView(
@@ -124,7 +123,8 @@ export default function Home() {
                       className={`${target === "about" ? "text-primary " : ""} group flex items-center py-3 hover:text-foreground`}
                     >
                       <span
-                        className={`${target === "about" ? "w-16 bg-primary text-primary" : ""} nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}
+                        className={`nav-indicator group mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none 
+                        ${target === "about" ? "!w-16 bg-primary text-primary" : "w-8"}`}
                       ></span>
                       <Link href="#about">About me</Link>
                     </li>
@@ -132,20 +132,26 @@ export default function Home() {
                       className={`${target === "experience" ? "text-primary " : ""} group flex items-center py-3 hover:text-foreground`}
                     >
                       <span
-                        className={`${target === "experience" ? "w-16 bg-primary text-primary" : ""} nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}
+                        className={`${target === "experience" ? "!w-16 bg-primary text-primary" : ""} nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}
                       ></span>
                       <Link href="#experience">Experience</Link>
                     </li>
                     <li
                       className={`${target === "project" ? "text-primary " : ""} group flex items-center py-3 hover:text-foreground`}
                     >
-                      <span className="nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
+                      <span
+                        className={`nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none 
+                        ${target === "projects" ? "!w-16 bg-primary text-primary" : ""}`}
+                      ></span>
                       <Link href="#project">Projects</Link>
                     </li>
                     <li
                       className={`${target === "skills" ? "text-primary " : ""} group flex items-center py-3 hover:text-foreground`}
                     >
-                      <span className="nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
+                      <span
+                        className={`nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none 
+                        ${target === "skills" ? "!w-16 bg-primary text-primary" : ""}`}
+                      ></span>
                       <Link href="#skills">Skills</Link>
                     </li>
                   </ul>
@@ -178,6 +184,7 @@ export default function Home() {
         </header>
         <main className="relative h-4/5 lg:w-2/3">
           <motion.section
+            onViewportEnter={() => console.log(1)}
             ref={refAbout as unknown as LegacyRef<HTMLElement>}
             className="h-full w-full lg:mt-24"
           >
