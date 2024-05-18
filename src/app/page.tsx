@@ -156,7 +156,7 @@ export default function Home() {
                     </li>
                   </ul>
                 </nav>
-                <div className="items-centers ml-1 mt-8 flex gap-4 text-muted-foreground">
+                <div className="items-centers ml-1 flex gap-4 text-muted-foreground lg:mt-8">
                   <Link target="_blank" href={"https://github.com/julio-ccatb"}>
                     <Github size={25} className="hover:text-primary" />
                   </Link>
