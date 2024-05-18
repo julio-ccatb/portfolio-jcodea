@@ -1,14 +1,20 @@
 "use client";
 
-import { Github, Linkedin, Mail } from "lucide-react";
+import {
+  motion,
+  useInView,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
+import { Download, Github, Linkedin, LoaderCircle, Mail } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { type LegacyRef, type RefObject, useRef, useState } from "react";
 import { Card } from "~/components/ui/card";
 import ExperienceCard, { type Experience } from "./_components/experienceCard";
-
 const Scene = dynamic(() => import("./_components/scene"), {
   ssr: false,
-  loading: () => <h3>...Loading</h3>,
+  loading: () => <LoaderCircle size={150} />,
 });
 
 const experiences: Experience[] = [
@@ -18,27 +24,89 @@ const experiences: Experience[] = [
     company: "Colegio Loyola Santo Domingo",
     description:
       "Build and maintain the workflows, servers and storages for the company and aplaying new infras structure as needed.",
-    tags: ["Networking", "NextJs", "Cisco", "Proxmox", "PowerShell", "UI/UX"],
+    tags: [
+      "Networking",
+      "NextJs",
+      "Cisco",
+      "Proxmox",
+      "PowerShell",
+      "UI/UX",
+      "Python",
+    ],
   },
   {
     date: "2022 — Present",
     title: "Independent Consultant",
     company: "Dvine Studios",
+    link: "https://dvinestudios.com/",
     description:
       "Build and maintain the workflows, servers and storages for the company and aplaying new infras structure as needed.",
     tags: ["Networking", "Wordpress", "CPanel", "Windows Server 2022"],
   },
+  {
+    date: "2019 - Present",
+    title: "Software Developer",
+    company: "Ozono Quimicos",
+    link: "https://ozono.jcodea.com/",
+    description:
+      "I've develop user-friendly applications across different departments, aimed at maintaining consistent product quality and ensuring the reproducibility of the manufacturing processes.",
+    tags: ["TypeScript", "NextJs", "Prisma", "TRPC", "Tailwind"],
+  },
+  {
+    date: "Jul 2021 - Dec 2021",
+    title: "Developer Intern",
+    company: "Atabey",
+    link: "https://inateso.com/",
+    description:
+      "      At Atabay Foundation, I oversaw the implementation of Moodle for online courses and created interactive content. Additionally, I developed a webpage for Inateso using WordPress.",
+    tags: ["Moodle", "WordPress"],
+  },
+  {
+    date: "Oct 2019 - Apr 2020",
+    title: "Senior Database Manager",
+    company: "Soluflex",
+    description:
+      "As an SQL Database Engineer, I specialized in database design, optimization, and performance tuning. Leveraging SQL expertise, I ensured secure and efficient data management, supporting organizational objectives with seamless database operations.",
+    tags: ["SQL", "PwerShell", "MongoDB"],
+  },
 ];
 
 export default function Home() {
+  const { scrollY } = useScroll();
+
+  const [target, setTarget] = useState<string>("about");
+  const refAbout = useRef();
+  const refExperience = useRef();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (ExperienceisInView) setTarget("experience");
+    if (aboutisInView) setTarget("about");
+
+    console.log(latest);
+  });
+
+  const aboutisInView = useInView(
+    refAbout as unknown as RefObject<HTMLElement>,
+    { amount: "all" },
+  );
+  const ExperienceisInView = useInView(
+    refExperience as unknown as RefObject<HTMLElement>,
+    { amount: "some" },
+  );
+
   return (
     <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
       <div className="relative lg:flex lg:justify-between lg:gap-4">
-        <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+        <header
+          id="about"
+          className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"
+        >
           <div className="">
             <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
               {`Hi, I'm `}
-              <span className="text-primary">Julio Castaño</span>{" "}
+              <Link href={"/"} className="text-primary">
+                Julio Castaño
+              </Link>{" "}
             </h1>
             <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
               Software Developer
@@ -52,31 +120,55 @@ export default function Home() {
               <div className="lg:w-1/2">
                 <nav className="nav hidden lg:block">
                   <ul className="mt-16 w-max text-xs font-extrabold uppercase text-muted-foreground">
-                    <li className="active group flex items-center py-3 hover:text-foreground">
-                      <span className="nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                      <Link href="/">About me</Link>
+                    <li
+                      className={`${target === "about" ? "text-primary " : ""} group flex items-center py-3 hover:text-foreground`}
+                    >
+                      <span
+                        className={`${target === "about" ? "w-16 bg-primary text-primary" : ""} nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}
+                      ></span>
+                      <Link href="#about">About me</Link>
                     </li>
-                    <li className="active group flex items-center py-3 hover:text-foreground">
-                      <span className="nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                      <Link href="/">Experience</Link>
+                    <li
+                      className={`${target === "experience" ? "text-primary " : ""} group flex items-center py-3 hover:text-foreground`}
+                    >
+                      <span
+                        className={`${target === "experience" ? "w-16 bg-primary text-primary" : ""} nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}
+                      ></span>
+                      <Link href="#experience">Experience</Link>
                     </li>
-                    <li className="active group flex items-center py-3 hover:text-foreground">
+                    <li
+                      className={`${target === "project" ? "text-primary " : ""} group flex items-center py-3 hover:text-foreground`}
+                    >
                       <span className="nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                      <Link href="/">Projects</Link>
+                      <Link href="#project">Projects</Link>
                     </li>
-                    <li className="active group flex items-center py-3 hover:text-foreground">
+                    <li
+                      className={`${target === "skills" ? "text-primary " : ""} group flex items-center py-3 hover:text-foreground`}
+                    >
                       <span className="nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                      <Link href="/">Skills</Link>
+                      <Link href="#skills">Skills</Link>
                     </li>
                   </ul>
                 </nav>
                 <div className="items-centers ml-1 mt-8 flex gap-4 text-muted-foreground">
-                  <Github size={25} className="hover:text-primary" />
-                  <Linkedin size={25} className="hover:text-primary" />
-                  <Mail size={25} className="hover:text-primary" />
+                  <Link target="_blank" href={"https://github.com/julio-ccatb"}>
+                    <Github size={25} className="hover:text-primary" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href={"https://www.linkedin.com/in/julio-cca/"}
+                  >
+                    <Linkedin size={25} className="hover:text-primary" />
+                  </Link>
+                  <Link href={"mailto:jcastano@jcodea.com"}>
+                    <Mail size={25} className="hover:text-primary" />
+                  </Link>
+                  <Link href={""}>
+                    <Download size={25} className="hover:text-primary" />
+                  </Link>
                 </div>
               </div>
-              <div className="pl- relative flex w-1/2 items-center justify-end">
+              <div className=" relative flex w-1/2 items-center justify-end">
                 <Card className=" cursor-pointer rounded-full bg-card lg:top-1/2 lg:h-[150px] lg:w-[150px]">
                   <Scene />
                 </Card>
@@ -85,7 +177,10 @@ export default function Home() {
           </div>
         </header>
         <main className="relative h-4/5 lg:w-2/3">
-          <section id="about" className="h-full w-full lg:mt-24">
+          <motion.section
+            ref={refAbout as unknown as LegacyRef<HTMLElement>}
+            className="h-full w-full lg:mt-24"
+          >
             <div className="flex flex-col gap-2 px-0 pt-4 lg:px-4 lg:pl-24 lg:pt-0">
               <p className="leading-normal text-muted-foreground">
                 My journey into coding began in 2016 when I started developing
@@ -123,9 +218,13 @@ export default function Home() {
                 the ever-evolving field of technology.
               </p>
             </div>
-          </section>
-          <section id="experience" className="pt-4">
-            <div className="flex flex-col gap-4 px-0 pt-4 lg:px-4 lg:pl-24 lg:pt-0">
+          </motion.section>
+          <motion.section
+            ref={refExperience as unknown as LegacyRef<HTMLElement>}
+            id="experience"
+            className="pt-4"
+          >
+            <div className="flex flex-col gap-4 px-0 pt-4  lg:pl-24 lg:pt-0">
               {experiences.map((experience) => (
                 <ExperienceCard
                   experience={experience}
@@ -133,7 +232,7 @@ export default function Home() {
                 />
               ))}
             </div>
-          </section>
+          </motion.section>
         </main>
       </div>
     </div>
