@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { Card } from "~/components/ui/card";
+import { Card, CardContent, CardDescription } from "~/components/ui/card";
 import Link from "next/link";
 
 const Scene = dynamic(() => import("./_components/scene"), {
@@ -52,9 +52,48 @@ export default function Home() {
           </div>
         </header>
         <section className="relative lg:w-2/3">
-          <Card className="absolute -left-[75px] top-1/2 h-[150px] w-[150px] cursor-pointer rounded-full bg-card">
+          <Card className="absolute -top-[150px] right-0 cursor-pointer rounded-full bg-card lg:-left-[95px] lg:top-1/2 lg:h-[150px] lg:w-[150px]">
             <Scene />
           </Card>
+          <div className="mt-32 h-full w-full lg:mt-24">
+            <CardContent className="flex flex-col gap-4 pt-4 lg:pl-24 lg:pt-0">
+              <p className="leading-normal text-muted-foreground">
+                My journey into coding began in 2016 when I started developing
+                solutions in
+                <span className="font-bold text-primary/80 hover:cursor-pointer">
+                  {" "}
+                  C#{" "}
+                </span>
+                and
+                <span className="font-bold text-primary/80 hover:cursor-pointer">
+                  {" "}
+                  JavaScript{" "}
+                </span>
+                for local businesses in my area. These businesses needed
+                customized software to streamline their operations, and I
+                quickly found myself immersed in the world of coding,
+                problem-solving, and creating efficient solutions. This hands-on
+                experience not only honed my programming skills but also ignited
+                my passion for technology and its applications in real-world
+                scenarios.
+              </p>
+              <p className="mt-4 leading-normal text-muted-foreground">
+                When I began university, I leveraged this foundation to secure
+                several entry-level jobs. These roles allowed me to further
+                develop my expertise and gain valuable industry experience.
+                Balancing my studies with these positions, I continued to learn
+                and grow, driven by a commitment to excellence and a desire to
+                innovate.
+              </p>
+              <p className="mt-4 leading-normal text-muted-foreground">
+                Today, I am a dedicated and enthusiastic developer, constantly
+                seeking new challenges and opportunities to apply my skills. My
+                early start and practical experience have shaped me into a
+                versatile and resourceful professional, ready to contribute to
+                the ever-evolving field of technology.
+              </p>
+            </CardContent>
+          </div>
         </section>
       </div>
     </main>
