@@ -1,7 +1,7 @@
-import { Text, useTexture } from "@react-three/drei";
+import { useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
-import { Mesh } from "three";
+import { type Mesh } from "three";
 
 function Model() {
   const mesh = useRef<Mesh>();

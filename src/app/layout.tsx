@@ -2,10 +2,10 @@ import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 
-import { TRPCReactProvider } from "~/trpc/react";
-import { ThemeProvider } from "./_components/providers/themeProvider";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "~/lib/utils";
+import { TRPCReactProvider } from "~/trpc/react";
+import { ThemeProvider } from "./_components/providers/themeProvider";
 
 export const metadata = {
   title: "Create T3 App",
@@ -24,10 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
+    <html lang="en" className={`${GeistSans.variable} scroll-smooth`}>
       <body
         className={cn(
-          "bg-background min-h-screen font-sans antialiased",
+          "min-h-screen bg-background font-sans leading-relaxed antialiased",
           fontSans.variable,
         )}
       >
