@@ -56,7 +56,7 @@ export default function Home() {
             <Scene />
           </Card>
           <div className="mt-32 h-full w-full lg:mt-24">
-            <CardContent className="flex flex-col gap-4 pt-4 lg:pl-24 lg:pt-0">
+            <CardContent className="flex flex-col gap-4 px-0 pt-4 lg:px-4 lg:pl-24 lg:pt-0">
               <p className="leading-normal text-muted-foreground">
                 My journey into coding began in 2016 when I started developing
                 solutions in
