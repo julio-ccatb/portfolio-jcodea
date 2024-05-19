@@ -29,7 +29,7 @@ const experiences: Experience[] = [
     company: "Dvine Studios",
     link: "https://dvinestudios.com/",
     description:
-      "Build and maintain the workflows, servers and storages for the company and aplaying new infras structure as needed.",
+      "Build and maintain the workflows, servers and storages for the company and aplaying new infrastructure as needed.",
     tags: ["Networking", "Wordpress", "CPanel", "Windows Server"],
   },
   {
@@ -64,7 +64,7 @@ const experiences: Experience[] = [
     company: "Soluflex",
     description:
       "As an SQL Database Engineer, I specialized in database design, optimization, and performance tuning. Leveraging SQL expertise, I ensured secure and efficient data management, supporting organizational objectives with seamless database operations.",
-    tags: ["SQL", "PwerShell", "MongoDB"],
+    tags: ["SQL", "PowerShell", "MongoDB"],
   },
 ];
 

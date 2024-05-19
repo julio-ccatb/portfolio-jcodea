@@ -97,7 +97,7 @@ export default function Home() {
                       <Link href="#project">Projects</Link>
                     </li>
 
-                    <li
+                    {/* <li
                       className={`${target === "skills" ? "text-primary " : ""} group flex items-center py-3 hover:text-foreground`}
                     >
                       <span
@@ -105,7 +105,7 @@ export default function Home() {
                         ${target === "skills" ? "!w-16 bg-primary text-primary" : ""}`}
                       ></span>
                       <Link href="#skills">Skills</Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </nav>
                 <div className="items-centers ml-1 flex gap-4 text-muted-foreground lg:mt-8">

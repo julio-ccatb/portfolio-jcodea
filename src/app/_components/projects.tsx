@@ -5,7 +5,7 @@ import ProjectCard, { type Project } from "./projectCard";
 
 const projects: Project[] = [
   {
-    title: "Protfolio",
+    title: "Portfolio",
     github: "https://github.com/julio-ccatb/portfolio-jcodea",
 
     description:
@@ -21,10 +21,10 @@ const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "DaisyUI", "Tailwind", "Stripe"],
   },
   {
-    title: "Intituto Inateso",
+    title: "Inateso Institute (Atabey Fundation)",
     description:
-      "This web page was made for the atabey fundation as an intership using WordPress. later updated to recive donations via PayPal",
-    link: "https://inateso.com/",
+      "This web page was made for the Atabey Faundation as an intership using WordPress. later updated to recive donations via PayPal",
+    link: "https://inateso.com",
     tags: ["WordPress", "CPanel", "CSS", "WooCommerce", "PHP", "Elementor"],
   },
 ];
@@ -39,7 +39,7 @@ const ProjectsSection = ({
     <h2 className="mt-12 text-sm font-bold uppercase tracking-widest lg:sr-only">
       Projects
     </h2>
-    <div className="flex flex-col gap-4 px-0 pt-4   lg:mt-8 lg:pl-24">
+    <div className="flex flex-col gap-4 px-0 pt-4 lg:mt-8 lg:pl-24">
       <ul className="group/list">
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
