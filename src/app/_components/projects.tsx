@@ -21,9 +21,9 @@ const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "DaisyUI", "Tailwind", "Stripe"],
   },
   {
-    title: "Inateso Institute (Atabey Fundation)",
+    title: "Inateso Institute (Atabey Foundation)",
     description:
-      "This web page was made for the Atabey Faundation as an intership using WordPress. later updated to recive donations via PayPal",
+      "This web page was made for the Atabey Foundation as an intership using WordPress, later updated to recive donations via PayPal",
     link: "https://inateso.com",
     tags: ["WordPress", "CPanel", "CSS", "WooCommerce", "PHP", "Elementor"],
   },
