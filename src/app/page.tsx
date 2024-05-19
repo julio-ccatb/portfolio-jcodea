@@ -12,6 +12,7 @@ import Link from "next/link";
 import { type LegacyRef, type RefObject, useRef, useState } from "react";
 import { Card } from "~/components/ui/card";
 import ExperienceCard, { type Experience } from "./_components/experienceCard";
+import { ModeToggle } from "./_components/modeToggle";
 const Scene = dynamic(() => import("./_components/scene"), {
   ssr: false,
   loading: () => <LoaderCircle size={150} />,
@@ -94,20 +95,23 @@ export default function Home() {
   );
 
   return (
-    <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+    <div className="relative mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+      <div className="fixed right-12 top-8">
+        <ModeToggle />
+      </div>
       <div className="relative lg:flex lg:justify-between lg:gap-4">
         <header
           id="about"
           className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"
         >
           <div className="">
-            <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight  sm:text-5xl">
               {`Hi, I'm `}
               <Link href={"/"} className="text-primary">
                 Julio Castaño
               </Link>{" "}
             </h1>
-            <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+            <h2 className="mt-3 text-lg font-medium tracking-tight sm:text-xl">
               Software Developer
             </h2>
             <p className="mt-4 max-w-xs leading-normal text-muted-foreground">
