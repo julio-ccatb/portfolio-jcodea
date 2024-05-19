@@ -96,7 +96,7 @@ export default function Home() {
 
   return (
     <div className="relative mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
-      <div className="fixed right-12 top-8">
+      <div className="fixed bottom-8 right-8 z-50 lg:top-8">
         <ModeToggle />
       </div>
       <div className="relative lg:flex lg:justify-between lg:gap-4">
