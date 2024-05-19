@@ -8,15 +8,19 @@ const experiences: Experience[] = [
     title: "Network Administrator",
     company: "Colegio Loyola Santo Domingo",
     description:
-      "Build and maintain the workflows, servers and storages for the company and aplaying new infras structure as needed.",
+      "As a Network Administrator with a passion for crafting software, I've been creating software to meet the expectations of the role, automating tasks, and planning the infrastructure carefully. From design to optimization, I ensure smooth operations and effective connectivity and security.",
     tags: [
       "Networking",
-      "NextJs",
+      "Next.js",
+      "SQL",
+      "CPanel",
+      "Windows Server",
       "Cisco",
       "Proxmox",
       "PowerShell",
       "UI/UX",
       "Python",
+      "Google Suite",
     ],
   },
   {
@@ -26,7 +30,7 @@ const experiences: Experience[] = [
     link: "https://dvinestudios.com/",
     description:
       "Build and maintain the workflows, servers and storages for the company and aplaying new infras structure as needed.",
-    tags: ["Networking", "Wordpress", "CPanel", "Windows Server 2022"],
+    tags: ["Networking", "Wordpress", "CPanel", "Windows Server"],
   },
   {
     date: "2019 - Present",
@@ -35,7 +39,15 @@ const experiences: Experience[] = [
     link: "https://ozono.jcodea.com/",
     description:
       "I've develop user-friendly applications across different departments, aimed at maintaining consistent product quality and ensuring the reproducibility of the manufacturing processes.",
-    tags: ["TypeScript", "NextJs", "Prisma", "TRPC", "Tailwind"],
+    tags: [
+      "TypeScript",
+      "Next.Js",
+      "React",
+      "Prisma",
+      "TRPC",
+      "Tailwind",
+      "SQL",
+    ],
   },
   {
     date: "Jul 2021 - Dec 2021",

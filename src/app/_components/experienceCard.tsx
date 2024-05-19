@@ -13,8 +13,8 @@ export type Experience = {
 };
 
 const ExperienceCard = ({ experience }: { experience: Experience }) => (
-  <Card className="border-none bg-transparent p-4 duration-300 ease-in-out hover:cursor-pointer hover:bg-card ">
-    <div className="items-start justify-start gap-6 py-4 lg:flex">
+  <Card className="border-none bg-transparent p-4 transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-card lg:drop-shadow-lg lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]">
+    <div className="items-start justify-start gap-6 py-4 hover:text-primary lg:flex">
       <div className="lg:w-1/4">
         <p className="pb-1 text-xs font-semibold uppercase text-muted-foreground lg:pb-0">
           {experience.date}
@@ -28,7 +28,7 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => (
               <Link
                 target="_blank"
                 href={experience.link}
-                className="transition-all duration-300 ease-in-out hover:text-primary"
+                className="ease-in-out hover:text-primary"
               >
                 <SquareArrowOutUpRight size={15} />
               </Link>
