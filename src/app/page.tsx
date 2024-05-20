@@ -109,7 +109,7 @@ export default function Home() {
                   </ul>
                 </nav>
                 <div
-                  className={`items-centers ml-1 flex gap-4 text-muted-foreground hover:text-primary lg:mt-8 ${scrollYProgress.get() > 0.9 && "mb-4"}`}
+                  className={`items-centers ml-1 flex gap-4 text-muted-foreground lg:mt-8 ${scrollYProgress.get() > 0.9 && "mb-4"}`}
                 >
                   <Link target="_blank" href={"https://github.com/julio-ccatb"}>
                     <Github size={25} className="hover:text-primary" />
