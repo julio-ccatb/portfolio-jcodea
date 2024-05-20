@@ -9,9 +9,16 @@ const projects: Project[] = [
     github: "https://github.com/julio-ccatb/portfolio-jcodea",
 
     description:
-      "This is my portfolio, created with the help of T3 Stack and Shadcn, it's become a cozy corner to showcase my work. Feel free to browse around, chill out, and enjoy the vibe while checking out what I've been up to.",
+      "This portfolio, developed using T3 Stack and Shadcn, provides a platform to showcase my work. Feel free to explore and see what I've been working on.",
     link: "https://me.jcodea.com",
-    tags: ["Next.js", "TypeScript", "Shadcn", "Tailwind", "Framer Motion"],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Shadcn",
+      "Three.js",
+      "Tailwind",
+      "Framer Motion",
+    ],
   },
   {
     title: "Color Unit",
