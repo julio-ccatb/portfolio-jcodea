@@ -108,7 +108,9 @@ export default function Home() {
                     </li> */}
                   </ul>
                 </nav>
-                <div className="items-centers ml-1 flex gap-4 text-muted-foreground lg:mt-8">
+                <div
+                  className={`items-centers ml-1 flex gap-4 text-muted-foreground hover:text-primary lg:mt-8 ${scrollYProgress.get() > 0.9 && "mb-4"}`}
+                >
                   <Link target="_blank" href={"https://github.com/julio-ccatb"}>
                     <Github size={25} className="hover:text-primary" />
                   </Link>
@@ -121,8 +123,11 @@ export default function Home() {
                   <Link href={"mailto:jcastano@jcodea.com"}>
                     <Mail size={25} className="hover:text-primary" />
                   </Link>
-                  <Link href={""}>
-                    <Download size={25} className="hover:text-primary" />
+                  <Link href={"/Resume.pdf"}>
+                    <Download
+                      size={25}
+                      className={`hover:text-primary ${scrollYProgress.get() > 0.9 && "hidden"}`}
+                    />
                   </Link>
                 </div>
               </div>

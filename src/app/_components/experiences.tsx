@@ -38,7 +38,7 @@ const experiences: Experience[] = [
     company: "Ozono Quimicos",
     link: "https://ozono.jcodea.com/",
     description:
-      "I've develop user-friendly applications across different departments, aimed at maintaining consistent product quality and ensuring the reproducibility of the manufacturing processes.",
+      "Developed user-friendly applications across different departments, aimed at maintaining consistent product quality and ensuring the reproducibility of the manufacturing processes.",
     tags: [
       "TypeScript",
       "Next.Js",
