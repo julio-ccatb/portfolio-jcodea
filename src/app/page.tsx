@@ -12,9 +12,6 @@ import { ModeToggle } from "./_components/modeToggle";
 import ProjectsSection from "./_components/projects";
 const Scene = dynamic(() => import("./_components/scene"), {
   ssr: false,
-  loading: () => (
-    <LoaderCircle className="animate-spin text-primary" size={150} />
-  ),
 });
 
 export default function Home() {
@@ -137,11 +134,7 @@ export default function Home() {
                 // transition={{ delay: 1 }}
                 className=" relative flex w-1/2 items-center justify-end"
               >
-                <Card
-                  className={`cursor-pointer rounded-full bg-card lg:top-1/2 lg:h-[150px] lg:w-[150px] `}
-                >
-                  <Scene />
-                </Card>
+                <Scene />
               </motion.div>
             </div>
           </div>
