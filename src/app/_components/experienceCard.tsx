@@ -1,8 +1,8 @@
+import { motion } from "framer-motion";
 import { SquareArrowOutUpRight } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "~/components/ui/badge";
 import { CardDescription } from "~/components/ui/card";
-import { motion } from "framer-motion";
 
 export type Experience = {
   title: string;

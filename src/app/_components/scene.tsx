@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
-import Model from "./models/model";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import Model from "./models/model";
 
 function Scene() {
   const { resolvedTheme } = useTheme();
@@ -25,7 +25,7 @@ function Scene() {
         <ambientLight
           color={resolvedTheme === "dark" ? "#09090B" : "04FCA6"}
           position={[-4, -10, -5]}
-          intensity={resolvedTheme === "dark" ? 0.5 : 8}
+          intensity={resolvedTheme === "dark" ? 0.5 : 1.5}
         />
         <pointLight
           color={"#04FCA6"}

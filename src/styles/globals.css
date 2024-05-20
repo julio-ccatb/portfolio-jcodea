@@ -35,14 +35,9 @@
     --radius: 0.5rem;
   }
   .light {
-    /* Name: custom color palette
-    Author: Ilias Ism
-    URL: https://gradient.page */
-
-    /* CSS: .bg-gradient { background: var(--gradient) } */
-
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --gradient: linear-gradient(to top left, #414d0b, #727a17);
+    --background: 75 98.75% 98.34%;
+    --foreground: 75 7.5% 0.68%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;

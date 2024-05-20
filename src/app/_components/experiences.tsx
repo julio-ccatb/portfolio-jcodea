@@ -1,5 +1,5 @@
-import React, { type RefObject } from "react";
 import { motion } from "framer-motion";
+import { type RefObject } from "react";
 import ExperienceCard, { type Experience } from "./experienceCard";
 
 const experiences: Experience[] = [

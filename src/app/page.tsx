@@ -1,11 +1,10 @@
 "use client";
 
 import { motion, useInView, useScroll } from "framer-motion";
-import { Download, Github, Linkedin, LoaderCircle, Mail } from "lucide-react";
+import { Download, Github, Linkedin, Mail } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { Card } from "~/components/ui/card";
 import AboutSection from "./_components/about";
 import ExperienceSection from "./_components/experiences";
 import { ModeToggle } from "./_components/modeToggle";
