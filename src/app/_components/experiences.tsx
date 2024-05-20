@@ -6,7 +6,8 @@ const experiences: Experience[] = [
   {
     date: "2021 — Present",
     title: "Network Administrator",
-    company: "Colegio Loyola Santo Domingo",
+    link: "https://loyola.edu.do/",
+    company: "Colegio Loyola, SD",
     description:
       "As a Network Administrator with a passion for crafting software, I've been creating software to meet the expectations of the role, automating tasks, and planning the infrastructure carefully. From design to optimization, I ensure smooth operations and effective connectivity and security.",
     tags: [
@@ -77,7 +78,7 @@ const ExperienceSection = ({
     <h2 className="text-sm font-bold uppercase tracking-widest lg:sr-only">
       Expeiences
     </h2>
-    <motion.div className="flex flex-col gap-4 px-0 pt-4  lg:pl-24 lg:pt-0">
+    <motion.div className="group/list flex flex-col gap-4 px-0  pt-4 lg:pl-24 lg:pt-0">
       {experiences.map((experience) => (
         <ExperienceCard experience={experience} key={experience.company} />
       ))}

@@ -25,13 +25,13 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable} scroll-smooth`}>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans leading-relaxed antialiased",
+          "bg-gradient bg-background-gradient min-h-screen font-sans leading-relaxed antialiased",
           fontSans.variable,
         )}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

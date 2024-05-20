@@ -35,25 +35,30 @@
     --radius: 0.5rem;
   }
   .light {
-    --gradient: linear-gradient(to top left, #414d0b, #727a17);
     --background: 75 98.75% 98.34%;
     --foreground: 75 7.5% 0.68%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+
+    --muted: 75 7.5% 91.7%;
+    --muted-foreground: 75 3.75% 41.7%;
+
+    --popover: 75 30% 91.7%;
+    --popover-foreground: 75 7.5% 0.8500000000000001%;
+
+    --card: 75 30% 91.7%;
+    --card-foreground: 75 7.5% 0.8500000000000001%;
+
+    --border: 75 12.5% 89.68%;
+    --input: 75 12.5% 89.68%;
+
     --primary: 142.1 76.2% 36.3%;
     --primary-foreground: 355.7 100% 97.3%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
     --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
+
     --ring: 142.1 76.2% 36.3%;
     --radius: 0.5rem;
   }
