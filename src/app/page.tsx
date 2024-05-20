@@ -135,7 +135,7 @@ export default function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, y: scrollYProgress.get() * 100 }}
                 // transition={{ delay: 1 }}
-                className=" relative flex w-1/2 items-center justify-end"
+                className={`relative flex w-1/2 items-center justify-end ${scrollYProgress.get() > 0.9 && "hidden"}`}
               >
                 <Scene />
               </motion.div>
