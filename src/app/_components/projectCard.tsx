@@ -40,13 +40,9 @@ const ProjectCard = ({ project }: { project: Project }) => (
             <span className="flex items-center gap-2 transition-all duration-300 ease-in-out">
               {project.title}{" "}
               {project.link && !project.github && (
-                <Link
-                  target="_blank"
-                  href={project.link}
-                  className=" hover:text-primary"
-                >
+                <span className=" hover:text-primary">
                   <SquareArrowOutUpRight size={15} />
-                </Link>
+                </span>
               )}
             </span>
           </Link>

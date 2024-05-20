@@ -5,20 +5,20 @@ import Model from "./models/model";
 
 function Scene() {
   const { resolvedTheme } = useTheme();
-
   return (
     <motion.div
-      whileHover={{
-        scale: 1.05,
-        borderColor: "#04FCA6",
-        transition: { duration: 2 },
-      }}
+      whileTap={{ rotate: 180 }}
       whileInView={{
         opacity: [0, 1],
         transition: { duration: 1 },
       }}
-      animate={{ opacity: 1 }}
-      className={`cursor-pointer rounded-full border border-primary/5 bg-card lg:top-1/2 lg:h-[150px] lg:w-[150px]`}
+      initial={{ scale: 1 }}
+      animate={{
+        opacity: 1,
+        rotate: [180],
+        borderColor: ["#04FCA6"],
+      }}
+      className={`z-50 cursor-pointer rounded-full border border-primary/5 bg-card lg:top-1/2 lg:h-[150px] lg:w-[150px]`}
     >
       <Canvas className="max-h-[150px] max-w-[150px]">
         {/* <Environment preset="night" /> */}

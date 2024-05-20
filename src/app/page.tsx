@@ -9,8 +9,12 @@ import AboutSection from "./_components/about";
 import ExperienceSection from "./_components/experiences";
 import { ModeToggle } from "./_components/modeToggle";
 import ProjectsSection from "./_components/projects";
+import { Skeleton } from "~/components/ui/skeleton";
 const Scene = dynamic(() => import("./_components/scene"), {
   ssr: false,
+  loading: () => (
+    <Skeleton className="min-h-[150px] min-w-[150px] rounded-full bg-primary-foreground" />
+  ),
 });
 
 export default function Home() {
