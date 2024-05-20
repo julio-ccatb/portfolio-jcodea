@@ -128,11 +128,12 @@ export default function Home() {
               </div>
 
               <motion.div
-                animate={{
-                  y: scrollYProgress.get() * 100,
-
-                  // rotateX: scrollYProgress.get() * 100 + 50,
+                whileInView={{
+                  opacity: [0, 1],
+                  transition: { duration: 0.5 },
                 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, y: scrollYProgress.get() * 100 }}
                 // transition={{ delay: 1 }}
                 className=" relative flex w-1/2 items-center justify-end"
               >
