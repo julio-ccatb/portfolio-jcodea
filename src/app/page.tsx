@@ -10,6 +10,7 @@ import ExperienceSection from "./_components/experiences";
 import { ModeToggle } from "./_components/modeToggle";
 import ProjectsSection from "./_components/projects";
 import { Skeleton } from "~/components/ui/skeleton";
+import Menu from "./_components/menu";
 const Scene = dynamic(() => import("./_components/scene"), {
   ssr: false,
   loading: () => (
@@ -69,47 +70,9 @@ export default function Home() {
 
             <div className="mt-4 flex items-center justify-between lg:mt-0">
               <div className="lg:w-1/2">
-                <nav className="nav hidden lg:block">
-                  <ul className="mt-16 w-max text-xs font-extrabold uppercase text-muted-foreground">
-                    <li
-                      className={`${target === "about" ? "text-primary " : ""} group flex items-center py-3 hover:text-foreground`}
-                    >
-                      <span
-                        className={`nav-indicator group mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none 
-                        ${target === "about" ? "!w-16 bg-primary text-primary" : "w-8"}`}
-                      ></span>
-                      <Link href="#about">About me</Link>
-                    </li>
-                    <li
-                      className={`${target === "experience" ? "text-primary " : ""} group flex items-center py-3 hover:text-foreground`}
-                    >
-                      <span
-                        className={`${target === "experience" ? "!w-16 bg-primary text-primary" : ""} nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}
-                      ></span>
-                      <Link href="#experience">Experience</Link>
-                    </li>
-                    <li
-                      className={`${target === "project" ? "text-primary " : ""} group flex items-center py-3 hover:text-foreground`}
-                    >
-                      <span
-                        className={`${target === "project" ? "!w-16 bg-primary text-primary" : ""} nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}
-                      ></span>
-                      <Link href="#project">Projects</Link>
-                    </li>
-
-                    {/* <li
-                      className={`${target === "skills" ? "text-primary " : ""} group flex items-center py-3 hover:text-foreground`}
-                    >
-                      <span
-                        className={`nav-indicator mr-4 h-px w-8 bg-muted-foreground transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none 
-                        ${target === "skills" ? "!w-16 bg-primary text-primary" : ""}`}
-                      ></span>
-                      <Link href="#skills">Skills</Link>
-                    </li> */}
-                  </ul>
-                </nav>
+                <Menu target={target} />
                 <div
-                  className={`items-centers ml-1 flex gap-4 text-muted-foreground lg:mt-8 ${scrollYProgress.get() > 0.9 && "mb-4"}`}
+                  className={`items-centers ml-1 flex gap-4 text-muted-foreground hover:text-primary lg:mt-8 ${scrollYProgress.get() > 0.9 && "mb-4"}`}
                 >
                   <Link target="_blank" href={"https://github.com/julio-ccatb"}>
                     <Github size={25} className="hover:text-primary" />
