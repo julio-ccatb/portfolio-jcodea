@@ -22,7 +22,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
     }}
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    whileHover={{ scale: 1.05 }}
+    whileHover={{ scale: 1.02 }}
     className="z-40 mb-12 p-4 hover:cursor-pointer hover:text-primary"
   >
     <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">

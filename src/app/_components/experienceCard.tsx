@@ -21,8 +21,8 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => (
     }}
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    whileHover={{ scale: 1.05 }}
-    className="rounded-md border-none bg-transparent p-4 transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-card lg:drop-shadow-lg lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]"
+    whileHover={{ scale: 1.02 }}
+    className="rounded-md border-none bg-transparent p-4 transition-all duration-200 ease-in-out hover:cursor-pointer hover:bg-card lg:drop-shadow-lg lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]"
   >
     <div className="items-start justify-start gap-6 py-4 hover:text-primary lg:flex lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
       <div className="lg:w-1/4">
