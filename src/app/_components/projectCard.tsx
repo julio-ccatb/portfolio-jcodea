@@ -12,6 +12,7 @@ export type Project = {
   github?: string;
   description: string;
   tags: string[];
+  img: string;
 };
 
 const ProjectCard = ({ project }: { project: Project }) => (
@@ -74,7 +75,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
       </div>
       <Image
         alt="not avilable"
-        src={"/not-avilable.png"}
+        src={project.img ?? "/not-avilable.png"}
         width={120}
         height={120}
         className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
