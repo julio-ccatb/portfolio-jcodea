@@ -4,30 +4,33 @@ import { cn } from "~/lib/utils";
 import "~/styles/globals.css";
 import { TRPCReactProvider } from "~/trpc/react";
 import { ThemeProvider } from "./_components/providers/themeProvider";
-import type { Metadata } from 'next'
-
-
+import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "Julio Castaño - Software Developer",
-  description: "Julio Castaño's personal site showcasing his journey and experience as a software developer, specializing in C# and JavaScript.",
+  description:
+    "Julio Castaño's personal site showcasing his journey and experience as a software developer, specializing in C# and JavaScript.",
   icons: [{ rel: "icon", url: "/Logo.svg" }],
   authors: { name: "Julio Castaño" },
-  keywords: "Julio Castaño, software developer, C#, JavaScript, coding, developer portfolio",
+  keywords:
+    "Julio Castaño, software developer, C#, JavaScript, coding, developer portfolio",
   openGraph: {
     title: "Julio Castaño - Software Developer and Technology Enthusiast",
-    description: "Julio Castaño's personal site showcasing his journey and experience as a software developer.",
+    description:
+      "Julio Castaño's personal site showcasing his journey and experience as a software developer.",
     image: "/Logo.svg",
     url: "https://me.jcodea.com/",
     type: "website",
   },
   twitter: {
     title: "Julio Castaño - Software Developer and Technology Enthusiast",
-    description: "Julio Castaño's personal site showcasing his journey and experience as a software developer.",
+    description:
+      "Julio Castaño's personal site showcasing his journey and experience as a software developer.",
     image: "/Logo.svg",
     site: "https://me.jcodea.com/",
   },
-  alternates: { canonical: "https://me.jcodea.com/" }
+  alternates: { canonical: "https://me.jcodea.com/" },
 } as Metadata;
 
 const fontSans = FontSans({
@@ -42,6 +45,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable} scroll-smooth`}>
+      <SpeedInsights />
       <body
         className={cn(
           "bg-gradient bg-background-gradient min-h-screen font-sans leading-relaxed antialiased",
