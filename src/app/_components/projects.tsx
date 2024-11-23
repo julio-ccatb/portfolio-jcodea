@@ -19,7 +19,7 @@ const projects: Project[] = [
       "Tailwind",
       "Framer Motion",
     ],
-    img: "https://utfs.io/f/f043a048-0755-4712-b173-c61a52a487c1-n3k5xe.png"
+    img: "https://utfs.io/f/f043a048-0755-4712-b173-c61a52a487c1-n3k5xe.png",
   },
   {
     title: "Color Unit",
@@ -28,7 +28,7 @@ const projects: Project[] = [
     link: "https://ozono.jcodea.com",
     tags: ["Next.js", "TypeScript", "DaisyUI", "Tailwind", "Stripe"],
 
-    img: "https://utfs.io/f/1c2d35aa-70ea-4356-b533-bdaf2fefdead-hpliu7.png"
+    img: "https://utfs.io/f/1c2d35aa-70ea-4356-b533-bdaf2fefdead-hpliu7.png",
   },
   {
     title: "Inateso Institute (Atabey Foundation)",
@@ -36,7 +36,7 @@ const projects: Project[] = [
       "This web page was made for the Atabey Foundation as an intership using WordPress, later updated to recive donations via PayPal",
     link: "https://inateso.com",
     tags: ["WordPress", "CPanel", "CSS", "WooCommerce", "PHP", "Elementor"],
-    img: "https://utfs.io/f/a0cbc294-d6cb-4351-9c70-c77f69f64237-befg6v.png"
+    img: "https://utfs.io/f/a0cbc294-d6cb-4351-9c70-c77f69f64237-befg6v.png",
   },
 ];
 

@@ -6,6 +6,7 @@ import { TRPCReactProvider } from "~/trpc/react";
 import { ThemeProvider } from "./_components/providers/themeProvider";
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Julio Castaño - Software Developer",
@@ -46,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable} scroll-smooth`}>
       <SpeedInsights />
+      <Analytics />
       <body
         className={cn(
           "bg-gradient bg-background-gradient min-h-screen font-sans leading-relaxed antialiased",
