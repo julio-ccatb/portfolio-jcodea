@@ -9,7 +9,7 @@ const projects: Project[] = [
     github: "https://github.com/julio-ccatb/portfolio-jcodea",
 
     description:
-      "This portfolio, developed using T3 Stack and Shadcn, provides a platform to showcase my work. Feel free to explore and see what I've been working on.",
+      "This portfolio, built with the T3 Stack and ShadCN UI, serves as a platform to showcase my work. Feel free to explore and discover what I’ve been working on!",
     link: "https://me.jcodea.com",
     tags: [
       "Next.js",
@@ -24,7 +24,7 @@ const projects: Project[] = [
   {
     title: "Color Unit",
     description:
-      "This application is responsible for ensuring the quality and excellence of Ozono Químicos and its products. It manages everything from inventory to production and later dispatch of orders. This web application was created using Next.js and is the evolution of a previous desktop application made in C#.",
+      "This application is responsible for ensuring the quality and excellence of Ozono Químicos and its products. It manages everything from inventory to production and the subsequent dispatch of orders. This web application was created using Next.js and is the evolution of a previous desktop application developed in C#.",
     link: "https://ozono.jcodea.com",
     tags: ["Next.js", "TypeScript", "DaisyUI", "Tailwind", "Stripe"],
 
@@ -33,7 +33,7 @@ const projects: Project[] = [
   {
     title: "Inateso Institute (Atabey Foundation)",
     description:
-      "This web page was made for the Atabey Foundation as an intership using WordPress, later updated to recive donations via PayPal",
+      "This web page was created for the Atabey Foundation as part of an internship using WordPress. It was later updated to support donations via PayPal.",
     link: "https://inateso.com",
     tags: ["WordPress", "CPanel", "CSS", "WooCommerce", "PHP", "Elementor"],
     img: "https://utfs.io/f/a0cbc294-d6cb-4351-9c70-c77f69f64237-befg6v.png",
