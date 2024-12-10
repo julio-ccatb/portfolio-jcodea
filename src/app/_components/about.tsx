@@ -17,37 +17,29 @@ const AboutSection = ({ refAbout }: { refAbout: RefObject<HTMLElement> }) => (
         About
       </h2>
       <p className="leading-normal text-muted-foreground">
-        My journey into coding began in 2016 when I started developing solutions
-        in
+        I began coding in 2016, specializing in{" "}
         <span className="font-bold text-primary/80 hover:cursor-pointer">
-          {" "}
-          C#{" "}
-        </span>
-        and
+          JavaScript
+        </span>{" "}
+        and{" "}
         <span className="font-bold text-primary/80 hover:cursor-pointer">
-          {" "}
-          JavaScript{" "}
+          TypeScript
         </span>
-        for local businesses in my area. These businesses needed customized
-        software to streamline their operations, and I quickly found myself
-        immersed in the world of coding, problem-solving, and creating efficient
-        solutions. This hands-on experience not only honed my programming skills
-        but also ignited my passion for technology and its applications in
-        real-world scenarios.
+        . Over the years, I’ve helped businesses streamline their operations and
+        enhance their online presence with custom software solutions. This
+        hands-on experience sparked my passion for building tools that drive
+        growth.
       </p>
-      <p className=" leading-normal text-muted-foreground">
-        When I began university, I leveraged this foundation to secure several
-        entry-level jobs. These roles allowed me to further develop my expertise
-        and gain valuable industry experience. Balancing my studies with these
-        positions, I continued to learn and grow, driven by a commitment to
-        excellence and a desire to innovate.
+      <p className="leading-normal text-muted-foreground">
+        While pursuing my degree, I worked in entry-level roles that allowed me
+        to refine my skills further. Through these experiences, I gained
+        valuable insight into creating efficient, user-friendly solutions for
+        various industries.
       </p>
       <p className="pb-24 leading-normal text-muted-foreground">
-        Today, I am a dedicated and enthusiastic developer, constantly seeking
-        new challenges and opportunities to apply my skills. My early start and
-        practical experience have shaped me into a versatile and resourceful
-        professional, ready to contribute to the ever-evolving field of
-        technology.
+        Today, I’m focused on creating practical software solutions that help
+        businesses thrive in the digital world, with a strong emphasis on
+        JavaScript and TypeScript.
       </p>
     </div>
   </motion.section>
