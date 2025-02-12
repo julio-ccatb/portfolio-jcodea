@@ -24,10 +24,10 @@ const ProjectCard = ({ project }: { project: Project }) => (
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     whileHover={{ scale: 1.02 }}
-    className="z-40 mb-12 p-4 hover:cursor-pointer hover:text-primary"
+    className="z-40 mb-12 rounded-md p-4 transition-all duration-200 ease-in-out hover:cursor-pointer hover:bg-card hover:text-primary lg:drop-shadow-lg lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]"
   >
     <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-      <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-card lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+      <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6"></div>
       <div className="z-10 sm:order-2 sm:col-span-6">
         <h3>
           <Link

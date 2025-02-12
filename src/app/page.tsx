@@ -64,8 +64,8 @@ export default function Home() {
               Software Developer
             </h2>
             <p className="mt-4 max-w-xs leading-normal text-muted-foreground">
-              I build pixel-perfect, engaging, and accessible digital
-              experiences.
+              I design software solutions to enhance performance and digital
+              presence.
             </p>
 
             <div className="mt-4 flex items-center justify-between lg:mt-0">

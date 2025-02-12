@@ -11,11 +11,11 @@ import { Analytics } from "@vercel/analytics/react";
 export const metadata = {
   title: "Julio Castaño - Software Developer",
   description:
-    "Julio Castaño's personal site showcasing his journey and experience as a software developer, specializing in C# and JavaScript.",
+    "Julio Castaño's personal site showcasing his journey and experience as a software developer, specializing in JavaScript and TypeScript.",
   icons: [{ rel: "icon", url: "/Logo.svg" }],
   authors: { name: "Julio Castaño" },
   keywords:
-    "Julio Castaño, software developer, C#, JavaScript, coding, developer portfolio",
+    "Julio Castaño, software developer, C#, JavaScript, TypeScript, coding, developer portfolio",
   openGraph: {
     title: "Julio Castaño - Software Developer and Technology Enthusiast",
     description:
