@@ -5,6 +5,14 @@ import ProjectCard, { type Project } from "./projectCard";
 
 const projects: Project[] = [
   {
+    title: "Dra. Ofara Pacheco - Dental Clinic",
+    description:
+      "This website was created for the Dra. Ofara Pacheco Dental Clinic. It was built using Next.js and Tailwind CSS and is hosted on Vercel.",
+    link: "https://drapacheco.com",
+    tags: ["Next.js", "TypeScript", "Shadcn", "Tailwind", "Framer Motion"],
+    img: "https://3hdrj4nvyn.ufs.sh/f/EgtRYMwXFUCykF5Q3dpcGFtfvneQ6AKq7P2sILOMxXhwyVET",
+  },
+  {
     title: "Portfolio",
     github: "https://github.com/julio-ccatb/portfolio-jcodea",
 
