@@ -5,6 +5,15 @@ import ProjectCard, { type Project } from "./projectCard";
 
 const projects: Project[] = [
   {
+    title: "Dvine Studios Website - Dvine Studios",
+    description:
+      "This website was redesigned for Dvine Studios, elevating their online presence from a previous WordPress build. Powered by Next.js and Tailwind CSS, it delivers faster performance and a smoother user experience. Hosted on Vercel, the site pairs technical efficiency with a clean, modern design that reflects Dvine Studios creative vision.",
+    link: "https://photograpypage.vercel.app",
+    tags: ["Next.js", "TypeScript", "Shadcn", "Tailwind", "Framer Motion"],
+    img: "https://3hdrj4nvyn.ufs.sh/f/EgtRYMwXFUCysJvOS3BVnTkm5PR69taG1FvXuJKoN7gfzwDh",
+    github: "https://github.com/julio-ccatb/photograpypage",
+  },
+  {
     title: "Dra. Ofara Pacheco - Dental Clinic",
     description:
       "This website was created for the Dra. Ofara Pacheco Dental Clinic. It was built using Next.js and Tailwind CSS and is hosted on Vercel.",
@@ -13,7 +22,7 @@ const projects: Project[] = [
     img: "https://3hdrj4nvyn.ufs.sh/f/EgtRYMwXFUCykF5Q3dpcGFtfvneQ6AKq7P2sILOMxXhwyVET",
   },
   {
-    title: "Portfolio",
+    title: "Portfolio - JCodea",
     github: "https://github.com/julio-ccatb/portfolio-jcodea",
 
     description:
@@ -30,7 +39,7 @@ const projects: Project[] = [
     img: "https://utfs.io/f/f043a048-0755-4712-b173-c61a52a487c1-n3k5xe.png",
   },
   {
-    title: "Color Unit",
+    title: "Color Unit - Ozono Químicos",
     description:
       "This application is responsible for ensuring the quality and excellence of Ozono Químicos and its products. It manages everything from inventory to production and the subsequent dispatch of orders. This web application was created using Next.js and is the evolution of a previous desktop application developed in C#.",
     link: "https://ozono.jcodea.com",
@@ -39,7 +48,7 @@ const projects: Project[] = [
     img: "https://utfs.io/f/1c2d35aa-70ea-4356-b533-bdaf2fefdead-hpliu7.png",
   },
   {
-    title: "Inateso Institute (Atabey Foundation)",
+    title: "Inateso Institute - Atabey Foundation",
     description:
       "This web page was created for the Atabey Foundation as part of an internship using WordPress. It was later updated to support donations via PayPal.",
     link: "https://inateso.com",
