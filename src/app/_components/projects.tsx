@@ -5,13 +5,37 @@ import ProjectCard, { type Project } from "./projectCard";
 
 const projects: Project[] = [
   {
+    title: "Dvine Productora Website - Dvine Studios",
+    description:
+      "This website was created for Dvine Studios, a company that specializes in audiovisual production. It was built using Next.js and Tailwind CSS and is hosted on Vercel.",
+    link: "https://photograpypage.vercel.app",
+    tags: ["Next.js", "TypeScript", "Shadcn", "Tailwind", "Framer Motion"],
+    img: "https://3hdrj4nvyn.ufs.sh/f/EgtRYMwXFUCyiz218zhJ4vkTHSbWhe5znMIOsBfLg8rCKdN1",
+  },
+  {
     title: "Dvine Studios Website - Dvine Studios",
     description:
-      "This website was redesigned for Dvine Studios, elevating their online presence from a previous WordPress build. Powered by Next.js and Tailwind CSS, it delivers faster performance and a smoother user experience. Hosted on Vercel, the site pairs technical efficiency with a clean, modern design that reflects Dvine Studios creative vision.",
+      "This is the official website for Dvine Studios, a creative studio specializing in photography and video production. The site was built using Next.js and Tailwind CSS, and is hosted on Vercel. It features a modern design and showcases the studio's portfolio.",
     link: "https://photograpypage.vercel.app",
     tags: ["Next.js", "TypeScript", "Shadcn", "Tailwind", "Framer Motion"],
     img: "https://3hdrj4nvyn.ufs.sh/f/EgtRYMwXFUCysJvOS3BVnTkm5PR69taG1FvXuJKoN7gfzwDh",
     github: "https://github.com/julio-ccatb/photograpypage",
+  },
+  {
+    title: "Pinturas Reds - Ozono Químicos",
+    description:
+      "This is the oline store for Pinturas Reds, a company that specializes in the sale of paints and coatings. The site was built using Next.js and Tailwind CSS, and is hosted on Vercel. It features a modern design and showcases the company's products.",
+    link: "https://pinturasreds.com",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Shadcn",
+      "Tailwind",
+      "Framer Motion",
+      "Shopify",
+      "Azul",
+    ],
+    img: "https://3hdrj4nvyn.ufs.sh/f/EgtRYMwXFUCy7327I8NJMHWGa1RAX2zDjPLIZBNFwKQlcoru",
   },
   {
     title: "Dra. Ofara Pacheco - Dental Clinic",
