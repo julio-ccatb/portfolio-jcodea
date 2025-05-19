@@ -8,7 +8,7 @@ const projects: Project[] = [
     title: "Dvine Productora Website - Dvine Studios",
     description:
       "This website was created for Dvine Studios, a company that specializes in audiovisual production. It was built using Next.js and Tailwind CSS and is hosted on Vercel.",
-    link: "https://photograpypage.vercel.app",
+    link: "https://www.demodvinevideo.jcodea.com",
     tags: ["Next.js", "TypeScript", "Shadcn", "Tailwind", "Framer Motion"],
     img: "https://3hdrj4nvyn.ufs.sh/f/EgtRYMwXFUCyiz218zhJ4vkTHSbWhe5znMIOsBfLg8rCKdN1",
   },
@@ -16,7 +16,7 @@ const projects: Project[] = [
     title: "Dvine Studios Website - Dvine Studios",
     description:
       "This is the official website for Dvine Studios, a creative studio specializing in photography and video production. The site was built using Next.js and Tailwind CSS, and is hosted on Vercel. It features a modern design and showcases the studio's portfolio.",
-    link: "https://photograpypage.vercel.app",
+    link: "https://www.demodvinephoto.jcodea.com",
     tags: ["Next.js", "TypeScript", "Shadcn", "Tailwind", "Framer Motion"],
     img: "https://3hdrj4nvyn.ufs.sh/f/EgtRYMwXFUCysJvOS3BVnTkm5PR69taG1FvXuJKoN7gfzwDh",
     github: "https://github.com/julio-ccatb/photograpypage",
