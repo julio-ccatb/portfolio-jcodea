@@ -4,27 +4,6 @@ import ExperienceCard, { type Experience } from "./experienceCard";
 
 const experiences: Experience[] = [
   {
-    date: "2021 — Present",
-    title: "Network Administrator",
-    link: "https://loyola.edu.do/",
-    company: "Colegio Loyola, SD",
-    description:
-      "As a Network Administrator with a passion for crafting software, I've been creating software to meet the expectations of the role, automating tasks, and planning the infrastructure carefully. From design to optimization, I ensure smooth operations and effective connectivity and security.",
-    tags: [
-      "Networking",
-      "Next.js",
-      "SQL",
-      "CPanel",
-      "Windows Server",
-      "Cisco",
-      "Proxmox",
-      "PowerShell",
-      "UI/UX",
-      "Python",
-      "Google Suite",
-    ],
-  },
-  {
     date: "2022 — Present",
     title: "Independent Consultant",
     company: "Dvine Studios",
@@ -48,6 +27,27 @@ const experiences: Experience[] = [
       "TRPC",
       "Tailwind",
       "SQL",
+    ],
+  },
+  {
+    date: "2021 — 2025",
+    title: "Network Administrator",
+    link: "https://loyola.edu.do/",
+    company: "Colegio Loyola, SD",
+    description:
+      "As a Network Administrator with a passion for crafting software, I've been creating software to meet the expectations of the role, automating tasks, and planning the infrastructure carefully. From design to optimization, I ensure smooth operations and effective connectivity and security.",
+    tags: [
+      "Networking",
+      "Next.js",
+      "SQL",
+      "CPanel",
+      "Windows Server",
+      "Cisco",
+      "Proxmox",
+      "PowerShell",
+      "UI/UX",
+      "Python",
+      "Google Suite",
     ],
   },
   {
