@@ -11,13 +11,25 @@ import { ModeToggle } from "./_components/modeToggle";
 import ProjectsSection from "./_components/projects";
 import { Skeleton } from "~/components/ui/skeleton";
 import Menu from "./_components/menu";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "~/components/ui/popover";
+import { Button } from "~/components/ui/button";
+import { Card } from "~/components/ui/card";
 const Scene = dynamic(() => import("./_components/scene"), {
   ssr: false,
   loading: () => (
     <Skeleton className="min-h-[150px] min-w-[150px] rounded-full bg-primary-foreground" />
   ),
 });
-
+type Language = {
+  code: string;
+  name: string;
+  flag: string;
+  href: string;
+};
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const [target, setTarget] = useState<string>("about");
@@ -31,6 +43,12 @@ export default function Home() {
     margin: "-50%",
   });
   const projectsIsInView = useInView(refProjects, { margin: "-50%" });
+  const [open, setOpen] = useState(false);
+
+  const languages: Language[] = [
+    { code: "en", name: "English", flag: "🇺🇸", href: "ENG" },
+    { code: "es", name: "Spanish", flag: "🇪🇸", href: "ES" },
+  ];
 
   useEffect(() => {
     if (projectsIsInView) setTarget("project");
@@ -86,12 +104,29 @@ export default function Home() {
                   <Link href={"mailto:jcastano@jcodea.com"}>
                     <Mail size={25} className="hover:text-primary" />
                   </Link>
-                  <Link target="_blank" href={"/Resume.pdf"}>
-                    <Download
-                      size={25}
-                      className={`hover:text-primary ${scrollYProgress.get() > 0.9 && "hidden"}`}
-                    />
-                  </Link>
+                  <Popover open={open} onOpenChange={setOpen}>
+                    <PopoverTrigger asChild>
+                      <Download
+                        size={25}
+                        className={`hover:text-primary ${scrollYProgress.get() > 0.9 && "hidden"}`}
+                      />
+                    </PopoverTrigger>
+                    <PopoverContent className="w-fit p-0" align="end">
+                      <div className="p-2">
+                        {languages.map((language) => (
+                          <Button key={language.code} asChild variant={"ghost"}>
+                            <Link
+                              target="_blank"
+                              href={`/Resume_${language.href}.pdf`}
+                              className=""
+                            >
+                              {language.flag} {language.name}
+                            </Link>
+                          </Button>
+                        ))}
+                      </div>
+                    </PopoverContent>
+                  </Popover>
                 </div>
               </div>
 
