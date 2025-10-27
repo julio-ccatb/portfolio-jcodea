@@ -7,6 +7,7 @@ import { ThemeProvider } from "./_components/providers/themeProvider";
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import ChatwootWidget from "./_components/chatwoot/chatwoot";
 
 export const metadata = {
   title: "Julio Castaño - Software Developer",
@@ -55,6 +56,7 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <ChatwootWidget />
           <TRPCReactProvider>{children}</TRPCReactProvider>
         </ThemeProvider>
       </body>
