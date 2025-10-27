@@ -8,8 +8,13 @@ declare global {
     chatwootSDK?: {
       run: (opts: { websiteToken: string; baseUrl: string }) => void;
     };
-    chatwootSettings?: Record<string, any>;
-    $chatwoot?: any;
+    chatwootSettings?: Record<string, unknown>;
+    $chatwoot?: {
+      hide?: () => void;
+      toggle?: () => void;
+      // allow other runtime properties without using `any`
+      [key: string]: unknown;
+    };
   }
 }
 
